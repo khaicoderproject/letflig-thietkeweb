@@ -3438,3 +3438,225 @@ footer {
     text-decoration: underline;
   }
   
+  .section_two_letflig{
+    background-image: url("./resources/bg.jpg");
+  }
+
+        .icon-png {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+        }
+
+        .sidenavlinks {
+            display: flex;
+            align-items: center;
+        }
+
+        .team-section {
+            padding: 40px 20px;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .team-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-family: 'Kumbh Sans', sans-serif;
+            animation: slideInDown 1s ease-out; /* Animation cho tiêu đề nhóm */
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .member-card {
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            padding: 20px;
+            width: 220px;
+            transition: transform 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out forwards; /* Animation cho thẻ thành viên */
+            margin: 15px;
+        }
+
+        .team-container > .member-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .team-container > .member-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .team-container > .member-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+
+        .member-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        .member-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 5px;
+            text-align: center;
+            word-break: break-word;
+        }
+
+        .member-id {
+            font-size: 14px;
+            color: #aaa;
+            margin: 0 0 10px;
+            text-align: center;
+        }
+
+        .member-role {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .introduce_group h1 {
+            animation: slideInDown 1.2s ease-out; /* Animation cho tiêu đề giới thiệu */
+        }
+
+        .card {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideInLeft 0.6s ease-out forwards; /* Animation cho thẻ giới thiệu */
+            margin-bottom: 20px;
+        }
+
+        .about_container > .card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .about_container > .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .about_container > .card:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .about_container > .card:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        .contactUs a {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: zoomIn 0.4s ease-out forwards; /* Animation cho liên hệ */
+            margin: 0 10px;
+        }
+
+        .contactUs a:nth-child(1) {
+            animation-delay: 1.4s;
+        }
+
+        .contactUs a:nth-child(2) {
+            animation-delay: 1.6s;
+        }
+
+        /* Định nghĩa các keyframes cho animation */
+        @keyframes slideInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                color: #eee;
+            }
+            100% {
+                color: #aaa;
+            }
+        }
+    
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        @keyframes slideInBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
