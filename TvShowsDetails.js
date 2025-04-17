@@ -174,6 +174,7 @@ const Trailerfunc = function (id) {
 /*  CLCIKED*/
 
 const html2 = function (tvshow) {
+  console.log("tvshow",tvshow)
   let url = `./SeasonEpisode.html?/Z${+encodeURIComponent(
     tvshow.number_of_seasons
   )}-id=${+encodeURIComponent(tvshow.id)}`;
@@ -247,6 +248,7 @@ const CurrTvshow = async (id) => {
     `https://api.themoviedb.org/3/tv/${id}?api_key=${myApi}&append_to_response=credits,recommendations,similar`
   );
   const data = await res.json();
+  console.log("data-currshow",data)
   return data;
 };
 
@@ -257,7 +259,7 @@ function tvload() {
     let trailerHtml = Trailerfunc(fetcid);
     Trailer_section.innerHTML = trailerHtml;
     let htm = "";
-    console.log(dat);
+    console.log("dat",dat);
     htm = html2(dat);
     movieDetails.innerHTML = htm;
     let BigPoster = Bigposter(dat);

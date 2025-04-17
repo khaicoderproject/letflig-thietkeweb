@@ -19,7 +19,6 @@ const pageCount = document.querySelector(".pageCount");
 const searchbox = document.querySelector(".search");
 const tvshowscatogryGenre = document.querySelector(".tvshowscatogry_genre");
 const paginationBtn = document.querySelectorAll(".paginationBtn");
-
 paginationBtn.forEach((item) => item.classList.add("Categorymode"));
 
 window.addEventListener("scroll", function () {
@@ -96,9 +95,11 @@ const firstpage = async () => {
     `https://api.themoviedb.org/3/tv/${category}?api_key=6b2dec73b6697866a50cdaef60ccffcb&page=${intialPage}`
   );
   const data = await res.json();
+  console.log("data",data)
   const airingtoday = data.results;
   let htmll = " ";
   airingtoday.forEach((item) => {
+    console.log("item",item)
     if (item.poster_path !== null && "first_air_date" in item) {
       htmll += searchfun(item);
       searchResultDiv.innerHTML = htmll;
@@ -115,6 +116,7 @@ const Secondpage = async () => {
   let htmll = " ";
   airingtoday.forEach((item) => {
     if (item.poster_path !== null && "first_air_date" in item) {
+      console.log("item",item)
       htmll += searchfun(item);
       searchResultDiv.innerHTML = htmll;
     }

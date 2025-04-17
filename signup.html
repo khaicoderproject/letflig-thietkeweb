@@ -127,10 +127,11 @@
                       <h2>Sign Up</h2>
                       <input type="text" placeholder="Full Name" required />
                       <input type="email" placeholder="Email Address" required />
-                      <input type="password" placeholder="Password" required />
+                      <input type="password" id="password" placeholder="Password" required />
+                      <p id="password-error" style="color:red; display:none; margin-bottom: 5px;"></p>
                       <button type="submit">Create Account</button>
                       <div class="login-link">
-                        Already have an account? <a href="/index.html">Login here</a>
+                        Already have an account? <a href="./home.html">Login here</a>
                       </div>
                     </form>
                   </div>
@@ -202,6 +203,29 @@
         </div>
       </footer>
     <script src="./About.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('.register-form');
+        const passwordInput = document.getElementById('password');
+        const passwordError = document.getElementById('password-error');
+    
+        form.addEventListener('submit', function (e) {
+          const password = passwordInput.value;
+    
+          const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    
+          if (!regex.test(password)) {
+            e.preventDefault(); // Chặn submit
+            passwordError.textContent = 'Mật khẩu phải có ít nhất 8 ký tự, gồm chữ hoa, chữ thường, số và ký tự đặc biệt.';
+            passwordError.style.display = 'block';
+            passwordInput.focus();
+          } else {
+            passwordError.textContent = '';
+            passwordError.style.display = 'none';
+          }
+        });
+      });
+    </script>
 </body>
 
 </html>
